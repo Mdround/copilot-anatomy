@@ -13,6 +13,13 @@ schema from `~/kms/second-brain/` — do not import that structure, its
 frontmatter, or its ingest/query/lint vocabulary here. This is a plain
 reference catalogue, not a distilled pattern library.
 
+## Session-start protocol
+
+At the start of every session, before making any changes, run `git fetch`
+and `git status` to surface any upstream changes or local drift. Do this
+even if the session appears to pick up mid-task — don't assume the working
+tree matches what was last seen.
+
 ## Directory layout
 
 ```
