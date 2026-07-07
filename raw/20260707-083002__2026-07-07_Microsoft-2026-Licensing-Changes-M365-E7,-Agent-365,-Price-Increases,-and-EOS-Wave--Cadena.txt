@@ -1,0 +1,54 @@
+---
+title: Microsoft 2026 Licensing Changes: M365 E7, Agent 365, Price Increases, and EOS Wave | Cadena
+source: https://cadena.co/resources/guides/microsoft-licensing-changes
+date_captured: 2026-07-07
+date_published: 2026-04-21
+capture_method: shortcuts_ios
+note: Trimmed to excerpts relevant to wiki/features/m365-e7-frontier-suite.md
+      and wiki/features/agent-365.md on 2026-07-08. This repo is public;
+      full source text is not mirrored here — see source_url above for
+      the complete article.
+---
+Excerpt — licensing change table (M365 E7 and Agent 365 rows only):
+
+Microsoft Agent 365 General Availability | May 2026 | Agent 365 is the
+control plane for AI agents — governance, observability, and security
+across Microsoft AI and ecosystem-partner agents | Audit existing agents;
+identify which need formal governance; map sensitive data accessible by
+agents; register under sn_ai_governance
+
+Microsoft 365 E7: The Frontier Suite | May 2026 | M365 E7 unifies M365 E5,
+Copilot, and Agent 365 in a single SKU powered by Work IQ — integrated
+with Entra Suite and advanced Defender/Intune/Purview | Audit current
+license stack; model E3 → E5 → E7 cost scenarios; assess AI & agent
+readiness
+
+Excerpt — "Where Cadena focuses" section 1 (M365 E7 cost modelling):
+
+M365 E7 is the single most consequential packaging change since E5's
+introduction. Enterprises already on E5 + Copilot + Agent 365 add-ons will
+see E7 pitched as a "simplification" — but the math only works above a
+specific AI-user penetration rate.
+
+Excerpt — "Where Cadena focuses" section 2 (Agent 365 as governed CMDB
+entity):
+
+Agent 365 GA is not just an SKU — it's Microsoft's position that agents
+are licensable, governable, auditable assets. Every agent deployed in the
+enterprise should be registered, owned, and scoped.
+
+Excerpt — FAQ:
+
+What is Microsoft 365 E7?
+Microsoft 365 E7 ("the Frontier Suite") is a new license tier announced
+for May 2026. It unifies M365 E5, Microsoft 365 Copilot, and Agent 365
+into a single bundle powered by Work IQ. It includes Microsoft Entra Suite
+and advanced Defender, Intune, and Purview capabilities — sitting above E5
+in the M365 commercial stack.
+
+What is Microsoft Agent 365?
+Microsoft Agent 365 is the control plane for AI agents, going general
+availability in May 2026. It gives IT and security leaders a single place
+to observe, govern, manage, and secure agents across the organization —
+including agents built with Microsoft AI platforms and agents from
+ecosystem partners.
