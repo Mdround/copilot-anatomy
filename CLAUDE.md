@@ -35,6 +35,36 @@ journal/         Session continuity log. One file per session/day:
 scripts/         Ingestion/build scripts specific to this repo.
 ```
 
+## Ingest operation
+
+Triggered by: a new file appearing in `raw/` (staged automatically by
+`scripts/inbox_watcher.py` from the Dropbox inbox every 15 minutes), or the
+user saying "ingest `raw/<file>`".
+
+Steps:
+1. Read the source in full.
+2. Identify the feature(s) it relates to — an existing `wiki/features/*.md`
+   article to update, or a new one to create per the article schema below.
+   Search `wiki/features/` first; don't create a duplicate article for a
+   feature that's already covered.
+3. Cite the raw filename in the article's Description (e.g.
+   `Source: raw/<filename>`) — this is the forward link from wiki back to
+   its source.
+4. Append an entry to `journal/YYYY-MM-DD.md` (today's date; create the
+   file if it doesn't exist yet) recording which `raw/` file(s) were
+   ingested and which `wiki/features/*.md` articles were created or
+   touched as a result. This is what makes "has this raw file been
+   processed?" answerable without grepping the whole wiki — check
+   `journal/` first.
+5. Commit — one commit per ingest operation. Commit message format:
+   `ingest: <source filename> — <one-line description of what changed>`.
+6. Do NOT delete or rewrite anything in `raw/` — it's append-only.
+
+Not every `raw/` file will necessarily map to an in-scope feature (see
+Purpose) — if a source is out of scope, say so in the `journal/` entry
+rather than silently skipping it, so it's clear the file was reviewed and
+deliberately not turned into an article.
+
 ## Article schema (`wiki/features/*.md`)
 
 ### Frontmatter
