@@ -37,14 +37,17 @@ Sources:
 
 ## Known limitations
 
-- No stated licence tier or per-agent pricing model in the source — how
-  Agent 365 is actually metered/entitled outside of the E7 bundle isn't
-  described.
-- Scope of "ecosystem-partner agents" it can govern isn't enumerated —
-  unclear which third-party agent platforms are actually supported.
-- No detail on what "observability" and "security" concretely include
-  (e.g. logging granularity, anomaly detection, revocation) — the source
-  describes Agent 365's role at a positioning level, not a feature level.
+[none]
+
+## Unknowns
+
+- No published licence tier or per-agent pricing model for standalone use
+  — how it's metered/entitled outside the E7 bundle is undefined.
+- No enumerated list of supported ecosystem-partner agent platforms —
+  which third-party agents it can actually govern is unspecified.
+- Observability and security capabilities aren't concretely specified —
+  no detail on logging granularity, anomaly detection, or revocation
+  mechanics.
 
 ## Related features
 

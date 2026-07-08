@@ -35,12 +35,15 @@ Sources:
 
 ## Known limitations
 
+- Bundled tier: E5, Copilot, and Agent 365 are combined into a single SKU
+  with no option to license the three components separately under E7 —
+  an organisation wanting just one of the three gains nothing by moving
+  to this tier.
+
+## Unknowns
+
 - No list pricing has been published for E7 yet — only that it sits
   above E5 in the stack.
-- Bundled tier: E5, Copilot, and Agent 365 are combined into a single SKU
-  with no indication that the three components can be licensed
-  separately under E7 — an organisation wanting just one of the three
-  gains nothing by moving to this tier.
 - "Work IQ" is named as the capability underpinning the suite, but
   available material doesn't explain what it is or how it differs from
   existing Copilot orchestration/grounding.

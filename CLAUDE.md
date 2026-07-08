@@ -138,14 +138,20 @@ In this order:
 1. **Description** — what the feature is and does.
 2. **Dependencies** — what it requires (other features, licence tiers,
    infrastructure, opt-ins).
-3. **Known limitations** — constraints, gaps, and gotchas of the
-   service/feature itself, as stated by the source (e.g. what it can't do,
-   what it requires that it doesn't provide, rollout gaps). This is
-   **not** the place to caveat the source material's own reliability,
-   currency, or provenance (e.g. "this is a third-party blog, not
+3. **Known limitations** — constraints and gotchas **demonstrably true of
+   the feature/service itself**: things it can't do, requires but doesn't
+   provide, or is stated to be restricted by (e.g. "E5, Copilot, and
+   Agent 365 are combined into one SKU with no option to license them
+   separately"). This section is not a place to note that information is
+   *missing* — an absent price, an unspecified rollout date, or a detail
+   the source doesn't cover is not a limitation of the feature, it's a gap
+   in what's known about it (see **Unknowns** below). It is also **not**
+   the place to caveat the source material's own reliability, currency,
+   or provenance (e.g. "this is a third-party blog, not
    Microsoft-official," "this is a living document and may be stale") —
-   the `sources` list in frontmatter already discloses provenance, and
-   sourcing caveats don't belong mixed into feature-level limitations.
+   the `sources` list in frontmatter already discloses provenance. If a
+   feature genuinely has no known limitations reported by any source,
+   write `[none]` rather than omitting the section.
 
    If sources disagree on a specific claim anywhere in the article, merge
    to the most defensible statement and flag it with a bare `[?]` marker
@@ -153,13 +159,22 @@ In this order:
    explain the disagreement (see Ingest operation, step 2). `[?]` is the
    one form of inline uncertainty-flagging this schema uses; don't
    improvise other markers for the same purpose.
-4. **Related features** — cross-links to other `wiki/features/*.md` pages,
+4. **Unknowns** — significant gaps in what's currently known about the
+   feature: pricing not yet published, an unspecified scope, a named
+   capability the source doesn't explain, maturity/rollout status the
+   source doesn't state, etc. This is where "the source doesn't say X"
+   observations belong, since they describe the current state of
+   knowledge, not the feature. If a later ingest resolves one, move it out
+   of this section into Description/Dependencies/Known limitations as
+   appropriate rather than leaving a stale entry. Write `[none]` if there's
+   nothing significant left unresolved.
+5. **Related features** — cross-links to other `wiki/features/*.md` pages,
    using standard relative markdown links (e.g.
    `[Agent 365](agent-365.md)`), not `[[wikilink]]` syntax — this repo is
    plain markdown files on GitHub, not GitHub's separate Wiki product, so
    `[[...]]` renders as literal bracketed text instead of a link. Relative
    markdown links render correctly both on GitHub and in Obsidian.
-5. **Insight** — hand-added human commentary. Must be visually and
+6. **Insight** — hand-added human commentary. Must be visually and
    structurally distinct from the source-derived sections above it: put it
    under its own `## Insight` heading at the end of the article, formatted
    entirely as a blockquote:
