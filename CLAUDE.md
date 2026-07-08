@@ -47,19 +47,41 @@ Steps:
    article to update, or a new one to create per the article schema below.
    Search `wiki/features/` first; don't create a duplicate article for a
    feature that's already covered.
-3. Cite the raw filename in the article's Description (e.g.
-   `Source: raw/<filename>`) — this is the forward link from wiki back to
-   its source.
+
+   If an existing article already covers this feature from a different
+   source, **synthesize** — merge the new source's information into the
+   existing prose rather than appending a second, separate account. Add
+   an entry to the frontmatter `sources` list and a citation line for the
+   new `raw/<filename>` (per step 3) alongside the existing one(s); no
+   source is treated as primary over another.
+
+   If the new source conflicts with what's already written on a specific
+   point, keep both possibilities out of the reader's way: don't name
+   which source says what or explain the disagreement inline — just merge
+   to the most defensible statement you can and append a bare `[?]`
+   marker directly after the affected point to flag that there's
+   uncertainty. `[?]` always means "sources disagree on this specific
+   claim," nothing more specific — the detail of the disagreement isn't
+   recorded in the article.
+3. Cite the raw filename(s) in the article's Description — one line per
+   source, e.g.:
+   ```
+   Sources:
+   - raw/<filename-1>
+   - raw/<filename-2>
+   ```
+   This is the forward link from wiki back to its source(s); each line
+   here should correspond to one entry in the frontmatter `sources` list.
 4. Trim the `raw/<file>` down to excerpts: keep only the passages that
-   directly support claims used in the article(s) (plus any capture
-   frontmatter/metadata already at the top of the file, and the original
-   `source_url`), and remove the rest of the copied text. This repo is
-   public — unlike second-brain, `raw/` is not a private vault, so full
-   verbatim mirrors of third-party articles don't belong here long-term.
-   Short attributed excerpts kept for provenance are the target; a link to
-   `source_url` stands in for anything trimmed. This is the one sanctioned
-   edit to an existing `raw/` file — outside of an ingest pass, `raw/`
-   stays append-only.
+   directly support claims used in the article(s), and remove the rest of
+   the copied text, but keep the capture frontmatter at the top of the
+   file intact (including its `source:` URL). This repo is public —
+   unlike second-brain, `raw/` is not a private vault, so full verbatim
+   mirrors of third-party articles don't belong here long-term. Short
+   attributed excerpts kept for provenance are the target; the capture
+   frontmatter's `source:` URL stands in for anything trimmed. This is
+   the one sanctioned edit to an existing `raw/` file — outside of an
+   ingest pass, `raw/` stays append-only.
 5. Append an entry to `journal/YYYY-MM-DD.md` (today's date; create the
    file if it doesn't exist yet) recording which `raw/` file(s) were
    ingested/trimmed and which `wiki/features/*.md` articles were created or
@@ -86,14 +108,19 @@ title:
 service:
 licence_tier:
 maturity:
-source_url:
-source_publisher:
+sources:
+  - url:
+    publisher:
 date_reviewed:
 last_verified:
 tags: []
 ---
 ```
 
+- `sources` — a list, one entry per distinct source article the content
+  draws on. No entry is "primary" — when a feature is covered by more than
+  one source, add an entry per source as it's ingested rather than
+  overwriting or ranking them.
 - `licence_tier` — the licence/plan tier the feature belongs to (e.g. free,
   business, enterprise) — use whatever tier vocabulary the source material
   uses.
@@ -117,8 +144,15 @@ In this order:
    **not** the place to caveat the source material's own reliability,
    currency, or provenance (e.g. "this is a third-party blog, not
    Microsoft-official," "this is a living document and may be stale") —
-   `source_publisher` in frontmatter already discloses provenance, and
+   the `sources` list in frontmatter already discloses provenance, and
    sourcing caveats don't belong mixed into feature-level limitations.
+
+   If sources disagree on a specific claim anywhere in the article, merge
+   to the most defensible statement and flag it with a bare `[?]` marker
+   immediately after the point — don't name which source disagrees or
+   explain the disagreement (see Ingest operation, step 2). `[?]` is the
+   one form of inline uncertainty-flagging this schema uses; don't
+   improvise other markers for the same purpose.
 4. **Related features** — cross-links to other `wiki/features/*.md` pages,
    using standard relative markdown links (e.g.
    `[Agent 365](agent-365.md)`), not `[[wikilink]]` syntax — this repo is
@@ -164,8 +198,8 @@ In this order:
   wiki-editing pass that isn't doing a fresh ingest.
 - Don't trim a `raw/` excerpt down past what's needed to support the
   article's claims — err toward keeping slightly more context rather than
-  less, since it can't be recovered from `source_url` if the original page
-  changes or disappears.
+  less, since it can't be recovered from the source URL if the original
+  page changes or disappears.
 - Don't merge the Insight section's formatting with the rest of the
   article, and don't put source-derived facts inside it — the blockquote
   boundary is what keeps human commentary auditable.

@@ -3,8 +3,9 @@ title: Microsoft 365 E7 (Frontier Suite)
 service: Microsoft 365
 licence_tier: E7
 maturity:
-source_url: https://cadena.co/resources/guides/microsoft-licensing-changes
-source_publisher: Cadena
+sources:
+  - url: https://cadena.co/resources/guides/microsoft-licensing-changes
+    publisher: Cadena
 date_reviewed: 2026-07-08
 last_verified: 2026-07-07
 tags: [licensing, m365-e7, frontier-suite, copilot, agent-365, work-iq]
@@ -19,7 +20,8 @@ Agent 365 into a single bundled SKU, powered by "Work IQ," and includes
 Microsoft Entra Suite plus advanced Defender, Intune, and Purview
 capabilities.
 
-Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E7,-Agent-365,-Price-Increases,-and-EOS-Wave--Cadena.txt`
+Sources:
+- `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E7,-Agent-365,-Price-Increases,-and-EOS-Wave--Cadena.txt`
 
 ## Dependencies
 

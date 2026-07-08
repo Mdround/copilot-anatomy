@@ -3,8 +3,9 @@ title: Microsoft Agent 365
 service: Microsoft 365
 licence_tier:
 maturity: GA
-source_url: https://cadena.co/resources/guides/microsoft-licensing-changes
-source_publisher: Cadena
+sources:
+  - url: https://cadena.co/resources/guides/microsoft-licensing-changes
+    publisher: Cadena
 date_reviewed: 2026-07-08
 last_verified: 2026-07-07
 tags: [agent-365, ai-governance, control-plane, copilot, licensing]
@@ -20,7 +21,8 @@ ecosystem partners. It is positioned as making AI agents licensable,
 governable, and auditable assets, comparable in kind to how devices or
 service principals are managed today.
 
-Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E7,-Agent-365,-Price-Increases,-and-EOS-Wave--Cadena.txt`
+Sources:
+- `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E7,-Agent-365,-Price-Increases,-and-EOS-Wave--Cadena.txt`
 
 ## Dependencies
 

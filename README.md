@@ -13,8 +13,12 @@ to other features.
 
 Content here draws **only on externally-available source material** —
 public Microsoft/vendor documentation, announcements, and similar publicly
-published sources. Every article cites its source (`source_url`,
-`source_publisher`) in frontmatter.
+published sources. Every article cites its source(s) in a `sources` list
+in frontmatter; a feature covered by more than one source has its
+information merged into a single account rather than kept as separate
+per-source sections. Where sources disagree on a specific point, that
+point is flagged with a bare `[?]` marker rather than the article naming
+which source says what.
 
 Any added human commentary is kept in a clearly separated **Insight**
 section at the end of each article, visually distinguished (blockquoted)
