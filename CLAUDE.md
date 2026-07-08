@@ -119,7 +119,12 @@ In this order:
    Microsoft-official," "this is a living document and may be stale") —
    `source_publisher` in frontmatter already discloses provenance, and
    sourcing caveats don't belong mixed into feature-level limitations.
-4. **Related features** — cross-links to other `wiki/features/*.md` pages.
+4. **Related features** — cross-links to other `wiki/features/*.md` pages,
+   using standard relative markdown links (e.g.
+   `[Agent 365](agent-365.md)`), not `[[wikilink]]` syntax — this repo is
+   plain markdown files on GitHub, not GitHub's separate Wiki product, so
+   `[[...]]` renders as literal bracketed text instead of a link. Relative
+   markdown links render correctly both on GitHub and in Obsidian.
 5. **Insight** — hand-added human commentary. Must be visually and
    structurally distinct from the source-derived sections above it: put it
    under its own `## Insight` heading at the end of the article, formatted

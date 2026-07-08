@@ -26,8 +26,8 @@ Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E
 - Presupposes (bundles in) Microsoft 365 E5 entitlements.
 - Bundles Microsoft 365 Copilot licensing — no separate Copilot add-on
   purchase needed under E7.
-- Bundles [[agent-365]] — Agent 365 entitlement is included rather than
-  licensed separately.
+- Bundles [Agent 365](agent-365.md) — Agent 365 entitlement is included
+  rather than licensed separately.
 - Requires Microsoft Entra Suite for the identity/governance layer
   described in the source.
 
@@ -48,7 +48,7 @@ Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E
 
 ## Related features
 
-- [[agent-365]] — bundled into E7 as part of the unified SKU.
+- [Agent 365](agent-365.md) — bundled into E7 as part of the unified SKU.
 
 ## Insight
 

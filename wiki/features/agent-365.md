@@ -28,9 +28,10 @@ Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E
   and Entra ID for identity and data access scoping (SharePoint, Outlook,
   Teams, custom connectors), per the source's discussion of governance
   workflows.
-- Bundled into [[m365-e7-frontier-suite]] as part of the unified E7 SKU;
-  also available as its own control plane outside of E7 (the source
-  doesn't state E7 is required to use Agent 365).
+- Bundled into [M365 E7 (Frontier Suite)](m365-e7-frontier-suite.md) as
+  part of the unified E7 SKU; also available as its own control plane
+  outside of E7 (the source doesn't state E7 is required to use
+  Agent 365).
 
 ## Known limitations
 
@@ -45,8 +46,8 @@ Source: `raw/20260707-083002__2026-07-07_Microsoft-2026-Licensing-Changes-M365-E
 
 ## Related features
 
-- [[m365-e7-frontier-suite]] — bundles Agent 365 into a single SKU with
-  E5 and Copilot.
+- [M365 E7 (Frontier Suite)](m365-e7-frontier-suite.md) — bundles
+  Agent 365 into a single SKU with E5 and Copilot.
 
 ## Insight
 
