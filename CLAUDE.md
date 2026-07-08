@@ -72,8 +72,14 @@ In this order:
 1. **Description** — what the feature is and does.
 2. **Dependencies** — what it requires (other features, licence tiers,
    infrastructure, opt-ins).
-3. **Known limitations** — constraints, gaps, gotchas, as stated by the
-   source.
+3. **Known limitations** — constraints, gaps, and gotchas of the
+   service/feature itself, as stated by the source (e.g. what it can't do,
+   what it requires that it doesn't provide, rollout gaps). This is
+   **not** the place to caveat the source material's own reliability,
+   currency, or provenance (e.g. "this is a third-party blog, not
+   Microsoft-official," "this is a living document and may be stale") —
+   `source_publisher` in frontmatter already discloses provenance, and
+   sourcing caveats don't belong mixed into feature-level limitations.
 4. **Related features** — cross-links to other `wiki/features/*.md` pages.
 5. **Insight** — hand-added human commentary. Must be visually and
    structurally distinct from the source-derived sections above it: put it
